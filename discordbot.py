@@ -16,6 +16,18 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
-
+    
+ if (message.content === 'ピザうまい') {
+        let channel = message.channel;
+        let author = message.author.username;
+        let reply_text =`LLサイズでお願いします`;
+        message.reply(reply_text)
+            .then(message => console.log(`Sent message: ${reply_text}`))
+            .catch(console.error);
+        return;
+    }
+    if (message.content.match(/discord.gg/)) {
+        message.delete(100)
+   }
 
 bot.run(token)
