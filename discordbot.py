@@ -16,6 +16,16 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
-
+    
+@bot.command()
+if (message.content === 'ピザ最高') {
+        let channel = message.channel;
+        let author = message.author.username;
+        let reply_text = `毎日ピザ食べてます`;
+        message.reply(reply_text)
+            .then(message => console.log(`Sent message: ${reply_text}`))
+            .catch(console.error);
+        return;
+   }
 
 bot.run(token)
