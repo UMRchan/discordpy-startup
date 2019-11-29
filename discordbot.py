@@ -5,6 +5,11 @@ import traceback
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
+client.on('ready', message =>
+{
+  client.user.setPresence({ game: { name: 'ピザ食べてます' } });  
+  console.log('bot is ready!');
+});
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -16,6 +21,16 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
+    
+client.on('message', message =>
+{
+  if(message.isMemberMentioned(client.user))
+  {
+    message.reply( 'ピザ食べてるけど何か用？' );
+    return;
+  }
+});
+    
 
 
 bot.run(token)
