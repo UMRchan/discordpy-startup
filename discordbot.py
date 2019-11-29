@@ -14,8 +14,12 @@ async def on_command_error(ctx, error):
 
 
 @bot.command()
-async def ping(ctx):
-    await ctx.send('pong')
+async def ピザ(ctx):
+    await ctx.send('LLサイズで')
+    
+@bot.command()
+async def ピザのおすすめは？(ctx):
+    await ctx.send('おすすめピザはここだよhttps://himasamurai.com/all/pizza/')
 
 
 bot.run(token)
